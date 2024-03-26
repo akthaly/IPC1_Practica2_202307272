@@ -58,7 +58,7 @@ public class InterfazRecorrido extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        botonRegresar = new javax.swing.JButton();
+        botonSalir = new javax.swing.JButton();
         botonRegresar1 = new javax.swing.JButton();
         botonRegresar2 = new javax.swing.JButton();
         botonRegresar3 = new javax.swing.JButton();
@@ -87,7 +87,7 @@ public class InterfazRecorrido extends javax.swing.JFrame {
             }
         });
 
-        botonEnviarTodos.setText("Enviar");
+        botonEnviarTodos.setText("Enviar Todos");
         botonEnviarTodos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonEnviarTodosActionPerformed(evt);
@@ -146,11 +146,11 @@ public class InterfazRecorrido extends javax.swing.JFrame {
             .addGap(0, 8, Short.MAX_VALUE)
         );
 
-        botonRegresar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        botonRegresar.setText("Regresar");
-        botonRegresar.addActionListener(new java.awt.event.ActionListener() {
+        botonSalir.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        botonSalir.setText("Salir");
+        botonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonRegresarActionPerformed(evt);
+                botonSalirActionPerformed(evt);
             }
         });
 
@@ -212,7 +212,7 @@ public class InterfazRecorrido extends javax.swing.JFrame {
                                 .addGap(6, 6, 6)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(botonRegresar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(botonSalir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -288,7 +288,7 @@ public class InterfazRecorrido extends javax.swing.JFrame {
                     .addComponent(botonEnviar3)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botonRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
@@ -311,11 +311,11 @@ public class InterfazRecorrido extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresarActionPerformed
+    private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
         GenerarViaje volver = new GenerarViaje();
         volver.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_botonRegresarActionPerformed
+    }//GEN-LAST:event_botonSalirActionPerformed
 
     private void botonEnviarTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEnviarTodosActionPerformed
 
@@ -439,93 +439,93 @@ public class InterfazRecorrido extends javax.swing.JFrame {
 
     private void botonRegresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresar1ActionPerformed
         if (jLabel1.getText().equals("Carro Estándar 1")) {
-            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro, lblCarro.getX());
+            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro, lblCarro.getX(), String.valueOf(GenerarViaje.distancia1));
             estandar1.start();
         } else if (jLabel1.getText().equals("Carro Estándar 2")) {
-            CarroEstandarRegresar estandar2 = new CarroEstandarRegresar(this, lblCarro, lblCarro.getX());
+            CarroEstandarRegresar estandar2 = new CarroEstandarRegresar(this, lblCarro, lblCarro.getX(), String.valueOf(GenerarViaje.distancia1));
             estandar2.start();
         } else if (jLabel1.getText().equals("Carro Estándar 3")) {
-            CarroEstandarRegresar estandar3 = new CarroEstandarRegresar(this, lblCarro, lblCarro.getX());
+            CarroEstandarRegresar estandar3 = new CarroEstandarRegresar(this, lblCarro, lblCarro.getX(), String.valueOf(GenerarViaje.distancia1));
             estandar3.start();
         } else if (jLabel1.getText().equals("Motocicleta 1")) {
-            MotoRegresar moto1 = new MotoRegresar(this, lblMoto, lblMoto.getX());
+            MotoRegresar moto1 = new MotoRegresar(this, lblMoto, lblMoto.getX(), String.valueOf(GenerarViaje.distancia1));
             moto1.start();
         } else if (jLabel1.getText().equals("Motocicleta 2")) {
-            MotoRegresar moto2 = new MotoRegresar(this, lblMoto, lblMoto.getX());
+            MotoRegresar moto2 = new MotoRegresar(this, lblMoto, lblMoto.getX(), String.valueOf(GenerarViaje.distancia1));
             moto2.start();
         } else if (jLabel1.getText().equals("Motocicleta 3")) {
-            MotoRegresar moto3 = new MotoRegresar(this, lblMoto, lblMoto.getX());
+            MotoRegresar moto3 = new MotoRegresar(this, lblMoto, lblMoto.getX(), String.valueOf(GenerarViaje.distancia1));
             moto3.start();
         } else if (jLabel1.getText().equals("Carro Premium 1")) {
-            CarroPremiumRegresar premium1 = new CarroPremiumRegresar(this, lblCarroPremium, lblCarroPremium.getX());
+            CarroPremiumRegresar premium1 = new CarroPremiumRegresar(this, lblCarroPremium, lblCarroPremium.getX(), String.valueOf(GenerarViaje.distancia1));
             premium1.start();
         } else if (jLabel1.getText().equals("Carro Premium 2")) {
-            CarroPremiumRegresar premium2 = new CarroPremiumRegresar(this, lblCarroPremium, lblCarroPremium.getX());
+            CarroPremiumRegresar premium2 = new CarroPremiumRegresar(this, lblCarroPremium, lblCarroPremium.getX(), String.valueOf(GenerarViaje.distancia1));
             premium2.start();
         } else if (jLabel1.getText().equals("Carro Premium 3")) {
-            CarroPremiumRegresar premium3 = new CarroPremiumRegresar(this, lblCarroPremium, lblCarroPremium.getX());
+            CarroPremiumRegresar premium3 = new CarroPremiumRegresar(this, lblCarroPremium, lblCarroPremium.getX(), String.valueOf(GenerarViaje.distancia1));
             premium3.start();
         }
     }//GEN-LAST:event_botonRegresar1ActionPerformed
 
     private void botonRegresar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresar2ActionPerformed
         if (jLabel4.getText().equals("Carro Estándar 1")) {
-            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro1, lblCarro1.getX());
+            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro1, lblCarro1.getX(), String.valueOf(GenerarViaje.distancia2));
             estandar1.start();
         } else if (jLabel4.getText().equals("Carro Estándar 2")) {
-            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro1, lblCarro1.getX());
+            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro1, lblCarro1.getX(), String.valueOf(GenerarViaje.distancia2));
             estandar1.start();
         } else if (jLabel4.getText().equals("Carro Estándar 3")) {
-            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro1, lblCarro1.getX());
+            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro1, lblCarro1.getX(), String.valueOf(GenerarViaje.distancia2));
             estandar1.start();
         } else if (jLabel4.getText().equals("Motocicleta 1")) {
-            MotoRegresar moto1 = new MotoRegresar(this, lblMoto1, lblMoto1.getX());
+            MotoRegresar moto1 = new MotoRegresar(this, lblMoto1, lblMoto1.getX(), String.valueOf(GenerarViaje.distancia2));
             moto1.start();
         } else if (jLabel4.getText().equals("Motocicleta 2")) {
-            MotoRegresar moto2 = new MotoRegresar(this, lblMoto1, lblMoto1.getX());
+            MotoRegresar moto2 = new MotoRegresar(this, lblMoto1, lblMoto1.getX(), String.valueOf(GenerarViaje.distancia2));
             moto2.start();
         } else if (jLabel4.getText().equals("Motocicleta 3")) {
-            MotoRegresar moto3 = new MotoRegresar(this, lblMoto1, lblMoto1.getX());
+            MotoRegresar moto3 = new MotoRegresar(this, lblMoto1, lblMoto1.getX(), String.valueOf(GenerarViaje.distancia2));
             moto3.start();
         } else if (jLabel4.getText().equals("Carro Premium 1")) {
-            CarroPremiumRegresar premium1 = new CarroPremiumRegresar(this, lblCarroPremium1, lblCarroPremium1.getX());
+            CarroPremiumRegresar premium1 = new CarroPremiumRegresar(this, lblCarroPremium1, lblCarroPremium1.getX(), String.valueOf(GenerarViaje.distancia2));
             premium1.start();
         } else if (jLabel4.getText().equals("Carro Premium 2")) {
-            CarroPremiumRegresar premium2 = new CarroPremiumRegresar(this, lblCarroPremium1, lblCarroPremium1.getX());
+            CarroPremiumRegresar premium2 = new CarroPremiumRegresar(this, lblCarroPremium1, lblCarroPremium1.getX(), String.valueOf(GenerarViaje.distancia2));
             premium2.start();
         } else if (jLabel4.getText().equals("Carro Premium 3")) {
-            CarroPremiumRegresar premium3 = new CarroPremiumRegresar(this, lblCarroPremium1, lblCarroPremium1.getX());
+            CarroPremiumRegresar premium3 = new CarroPremiumRegresar(this, lblCarroPremium1, lblCarroPremium1.getX(), String.valueOf(GenerarViaje.distancia2));
             premium3.start();
         }
     }//GEN-LAST:event_botonRegresar2ActionPerformed
 
     private void botonRegresar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresar3ActionPerformed
         if (jLabel7.getText().equals("Carro Estándar 1")) {
-            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro2, lblCarro2.getX());
+            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro2, lblCarro2.getX(), String.valueOf(GenerarViaje.distancia3));
             estandar1.start();
         } else if (jLabel7.getText().equals("Carro Estándar 2")) {
-            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro2, lblCarro2.getX());
+            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro2, lblCarro2.getX(), String.valueOf(GenerarViaje.distancia3));
             estandar1.start();
         } else if (jLabel7.getText().equals("Carro Estándar 3")) {
-            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro2, lblCarro2.getX());
+            CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro2, lblCarro2.getX(), String.valueOf(GenerarViaje.distancia3));
             estandar1.start();
         } else if (jLabel7.getText().equals("Motocicleta 1")) {
-            MotoRegresar moto1 = new MotoRegresar(this, lblMoto2, lblMoto2.getX());
+            MotoRegresar moto1 = new MotoRegresar(this, lblMoto2, lblMoto2.getX(), String.valueOf(GenerarViaje.distancia3));
             moto1.start();
         } else if (jLabel7.getText().equals("Motocicleta 2")) {
-            MotoRegresar moto2 = new MotoRegresar(this, lblMoto2, lblMoto2.getX());
+            MotoRegresar moto2 = new MotoRegresar(this, lblMoto2, lblMoto2.getX(), String.valueOf(GenerarViaje.distancia3));
             moto2.start();
         } else if (jLabel7.getText().equals("Motocicleta 3")) {
-            MotoRegresar moto3 = new MotoRegresar(this, lblMoto2, lblMoto2.getX());
+            MotoRegresar moto3 = new MotoRegresar(this, lblMoto2, lblMoto2.getX(), String.valueOf(GenerarViaje.distancia3));
             moto3.start();
         } else if (jLabel7.getText().equals("Carro Premium 1")) {
-            CarroPremiumRegresar premium1 = new CarroPremiumRegresar(this, lblCarroPremium2, lblCarroPremium2.getX());
+            CarroPremiumRegresar premium1 = new CarroPremiumRegresar(this, lblCarroPremium2, lblCarroPremium2.getX(), String.valueOf(GenerarViaje.distancia3));
             premium1.start();
         } else if (jLabel7.getText().equals("Carro Premium 2")) {
-            CarroPremiumRegresar premium2 = new CarroPremiumRegresar(this, lblCarroPremium2, lblCarroPremium2.getX());
+            CarroPremiumRegresar premium2 = new CarroPremiumRegresar(this, lblCarroPremium2, lblCarroPremium2.getX(), String.valueOf(GenerarViaje.distancia3));
             premium2.start();
         } else if (jLabel7.getText().equals("Carro Premium 3")) {
-            CarroPremiumRegresar premium3 = new CarroPremiumRegresar(this, lblCarroPremium2, lblCarroPremium2.getX());
+            CarroPremiumRegresar premium3 = new CarroPremiumRegresar(this, lblCarroPremium2, lblCarroPremium2.getX(), String.valueOf(GenerarViaje.distancia3));
             premium3.start();
         }
     }//GEN-LAST:event_botonRegresar3ActionPerformed
@@ -800,10 +800,10 @@ public class InterfazRecorrido extends javax.swing.JFrame {
     private javax.swing.JButton botonEnviar2;
     private javax.swing.JButton botonEnviar3;
     private javax.swing.JButton botonEnviarTodos;
-    private javax.swing.JButton botonRegresar;
     private javax.swing.JButton botonRegresar1;
     private javax.swing.JButton botonRegresar2;
     private javax.swing.JButton botonRegresar3;
+    private javax.swing.JButton botonSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

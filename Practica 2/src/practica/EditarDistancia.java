@@ -148,6 +148,8 @@ public class EditarDistancia extends javax.swing.JFrame {
     }//GEN-LAST:event_botonAceptarActionPerformed
 
     private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
+        CargarArchivos regresar = new CargarArchivos();
+        regresar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonCancelarActionPerformed
 

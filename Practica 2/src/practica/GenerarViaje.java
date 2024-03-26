@@ -79,7 +79,7 @@ public class GenerarViaje extends javax.swing.JFrame {
         botonGenerarViaje = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
 
-        jPanel2.setBackground(new java.awt.Color(255, 100, 100));
+        jPanel2.setBackground(new java.awt.Color(209, 242, 255));
 
         jLabel1.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
         jLabel1.setText("Seleccionar punto inicial:");
@@ -102,6 +102,11 @@ public class GenerarViaje extends javax.swing.JFrame {
             }
         });
 
+        tipoTransporte.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tipoTransporteMouseClicked(evt);
+            }
+        });
         tipoTransporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tipoTransporteActionPerformed(evt);
@@ -273,10 +278,15 @@ public class GenerarViaje extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_botonSalirActionPerformed
 
+    private void tipoTransporteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipoTransporteMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tipoTransporteMouseClicked
+
     /**
      * @param args the command line arguments
      */
     private void tipoTransporteComboBox() {
+        tipoTransporte.addItem("Seleccionar...");
         tipoTransporte.addItem("Motocicleta 1");
         tipoTransporte.addItem("Motocicleta 2");
         tipoTransporte.addItem("Motocicleta 3");

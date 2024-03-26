@@ -73,7 +73,7 @@ public class CargarArchivos extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 100, 100));
+        jPanel1.setBackground(new java.awt.Color(209, 242, 255));
 
         tablaArchivoCSV.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

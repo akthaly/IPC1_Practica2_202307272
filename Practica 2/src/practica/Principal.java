@@ -37,7 +37,7 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 100, 100));
+        jPanel1.setBackground(new java.awt.Color(209, 242, 255));
 
         botonCargarArchivos.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
         botonCargarArchivos.setText("Cargar Rutas");

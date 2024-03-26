@@ -14,12 +14,14 @@ public class CarroEstandarRegresar extends Thread {
     InterfazRecorrido recorrido;
     Rectangle rec_muroFin;
     JLabel lblCarro;
+    String dis;
     int posicionXCarro;
 
-    public CarroEstandarRegresar(InterfazRecorrido recorrido,JLabel lblCarro, int posicionX) {
+    public CarroEstandarRegresar(InterfazRecorrido recorrido,JLabel lblCarro, int posicionX, String dis) {
         this.recorrido = recorrido;
         this.lblCarro = lblCarro;
         this.posicionXCarro = posicionX;
+        this.dis = dis;
         this.rec_muroFin = this.recorrido.lblPararRegreso.getBounds();
 
     }
@@ -27,9 +29,12 @@ public class CarroEstandarRegresar extends Thread {
      private volatile boolean running = true;
 
     public void run() {
+        
+        int distancia = Integer.parseInt(dis);
+        
         try {
             while (running) {
-                sleep(550);
+                sleep(20*distancia);
                 if (this.rec_muroFin.intersects(this.lblCarro.getBounds())) {
                     JOptionPane.showMessageDialog(null, "VIAJE DE REGRESO COMPLETADO");
                     pararThread();

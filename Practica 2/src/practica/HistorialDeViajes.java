@@ -44,7 +44,7 @@ public class HistorialDeViajes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 100, 100));
+        jPanel1.setBackground(new java.awt.Color(209, 242, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Historial de Viajes");
