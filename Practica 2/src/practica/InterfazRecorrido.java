@@ -24,8 +24,6 @@ public class InterfazRecorrido extends javax.swing.JFrame {
     public JLabel lblCarroPremium1 = new JLabel();
     public JLabel lblCarroPremium2 = new JLabel();
 
-    
-
     public InterfazRecorrido() {
         initComponents();
         establecerTextos();
@@ -203,12 +201,6 @@ public class InterfazRecorrido extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botonRegresar1)
-                        .addGap(18, 18, 18)
-                        .addComponent(botonEnviarTodos)
-                        .addGap(67, 67, 67))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -229,7 +221,13 @@ public class InterfazRecorrido extends javax.swing.JFrame {
                                         .addComponent(jLabel11))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addComponent(botonRegresar3)
-                                        .addGap(161, 161, 161)))))))
+                                        .addGap(161, 161, 161))))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonRegresar1)
+                        .addGap(18, 18, 18)
+                        .addComponent(botonEnviarTodos)
+                        .addGap(67, 67, 67)))
                 .addGap(27, 27, 27)
                 .addComponent(lblParar, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
@@ -298,8 +296,6 @@ public class InterfazRecorrido extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        botonEnviar1.getAccessibleContext().setAccessibleParent(jLabel4);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -323,25 +319,25 @@ public class InterfazRecorrido extends javax.swing.JFrame {
 
     private void botonEnviarTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEnviarTodosActionPerformed
 
-        CarroEstandar carroEstandar1 = new CarroEstandar(this,lblCarro, lblCarro.getX(), String.valueOf(GenerarViaje.distancia1));
-        Moto moto1 = new Moto(this,lblMoto, lblMoto.getX(), String.valueOf(GenerarViaje.distancia1));
-        CarroPremium carroPremium1 = new CarroPremium(this,lblCarroPremium, lblCarroPremium.getX(), String.valueOf(GenerarViaje.distancia1));
+        CarroEstandar carroEstandar1 = new CarroEstandar(this, lblCarro, lblCarro.getX(), String.valueOf(GenerarViaje.distancia1));
+        Moto moto1 = new Moto(this, lblMoto, lblMoto.getX(), String.valueOf(GenerarViaje.distancia1));
+        CarroPremium carroPremium1 = new CarroPremium(this, lblCarroPremium, lblCarroPremium.getX(), String.valueOf(GenerarViaje.distancia1));
 
         carroEstandar1.start();
         moto1.start();
         carroPremium1.start();
 
-        CarroEstandar carroEstandar2 = new CarroEstandar(this,lblCarro1, lblCarro1.getX(), String.valueOf(GenerarViaje.distancia2));
-        Moto moto2 = new Moto(this,lblMoto1, lblMoto1.getX(), String.valueOf(GenerarViaje.distancia2));
-        CarroPremium carroPremium2 = new CarroPremium(this,lblCarroPremium1, lblCarroPremium1.getX(), String.valueOf(GenerarViaje.distancia2));
+        CarroEstandar carroEstandar2 = new CarroEstandar(this, lblCarro1, lblCarro1.getX(), String.valueOf(GenerarViaje.distancia2));
+        Moto moto2 = new Moto(this, lblMoto1, lblMoto1.getX(), String.valueOf(GenerarViaje.distancia2));
+        CarroPremium carroPremium2 = new CarroPremium(this, lblCarroPremium1, lblCarroPremium1.getX(), String.valueOf(GenerarViaje.distancia2));
 
         carroEstandar2.start();
         moto2.start();
         carroPremium2.start();
 
-        CarroEstandar carroEstandar3 = new CarroEstandar(this,lblCarro2, lblCarro2.getX(),String.valueOf(GenerarViaje.distancia3));
-        Moto moto3 = new Moto(this,lblMoto2, lblMoto2.getX(), String.valueOf(GenerarViaje.distancia3));
-        CarroPremium carroPremium3 = new CarroPremium(this,lblCarroPremium2, lblCarroPremium2.getX(), String.valueOf(GenerarViaje.distancia3));
+        CarroEstandar carroEstandar3 = new CarroEstandar(this, lblCarro2, lblCarro2.getX(), String.valueOf(GenerarViaje.distancia3));
+        Moto moto3 = new Moto(this, lblMoto2, lblMoto2.getX(), String.valueOf(GenerarViaje.distancia3));
+        CarroPremium carroPremium3 = new CarroPremium(this, lblCarroPremium2, lblCarroPremium2.getX(), String.valueOf(GenerarViaje.distancia3));
 
         carroEstandar3.start();
         moto3.start();
@@ -355,25 +351,25 @@ public class InterfazRecorrido extends javax.swing.JFrame {
         } else if (jLabel7.getText().equals("Carro Estándar 2")) {
             CarroEstandar estandar1 = new CarroEstandar(this, lblCarro2, lblCarro2.getX(), String.valueOf(GenerarViaje.distancia3));
             estandar1.start();
-        } else if (jLabel7.getText().equals("Carro Estándar 3")){
+        } else if (jLabel7.getText().equals("Carro Estándar 3")) {
             CarroEstandar estandar1 = new CarroEstandar(this, lblCarro2, lblCarro2.getX(), String.valueOf(GenerarViaje.distancia3));
             estandar1.start();
-        } else if(jLabel7.getText().equals("Motocicleta 1")){
+        } else if (jLabel7.getText().equals("Motocicleta 1")) {
             Moto moto1 = new Moto(this, lblMoto2, lblMoto2.getX(), String.valueOf(GenerarViaje.distancia3));
             moto1.start();
-        } else if(jLabel7.getText().equals("Motocicleta 2")){
+        } else if (jLabel7.getText().equals("Motocicleta 2")) {
             Moto moto2 = new Moto(this, lblMoto2, lblMoto2.getX(), String.valueOf(GenerarViaje.distancia3));
             moto2.start();
-        } else if(jLabel7.getText().equals("Motocicleta 3")){
+        } else if (jLabel7.getText().equals("Motocicleta 3")) {
             Moto moto3 = new Moto(this, lblMoto2, lblMoto2.getX(), String.valueOf(GenerarViaje.distancia3));
             moto3.start();
-        } else if(jLabel7.getText().equals("Carro Premium 1")){
+        } else if (jLabel7.getText().equals("Carro Premium 1")) {
             CarroPremium premium1 = new CarroPremium(this, lblCarroPremium2, lblCarroPremium2.getX(), String.valueOf(GenerarViaje.distancia3));
             premium1.start();
-        } else if(jLabel7.getText().equals("Carro Premium 2")){
+        } else if (jLabel7.getText().equals("Carro Premium 2")) {
             CarroPremium premium2 = new CarroPremium(this, lblCarroPremium2, lblCarroPremium2.getX(), String.valueOf(GenerarViaje.distancia3));
             premium2.start();
-        } else if(jLabel7.getText().equals("Carro Premium 3")){
+        } else if (jLabel7.getText().equals("Carro Premium 3")) {
             CarroPremium premium3 = new CarroPremium(this, lblCarroPremium2, lblCarroPremium2.getX(), String.valueOf(GenerarViaje.distancia3));
             premium3.start();
         }
@@ -386,25 +382,25 @@ public class InterfazRecorrido extends javax.swing.JFrame {
         } else if (jLabel4.getText().equals("Carro Estándar 2")) {
             CarroEstandar estandar1 = new CarroEstandar(this, lblCarro1, lblCarro1.getX(), String.valueOf(GenerarViaje.distancia2));
             estandar1.start();
-        } else if (jLabel4.getText().equals("Carro Estándar 3")){
+        } else if (jLabel4.getText().equals("Carro Estándar 3")) {
             CarroEstandar estandar1 = new CarroEstandar(this, lblCarro1, lblCarro1.getX(), String.valueOf(GenerarViaje.distancia2));
             estandar1.start();
-        } else if(jLabel4.getText().equals("Motocicleta 1")){
+        } else if (jLabel4.getText().equals("Motocicleta 1")) {
             Moto moto1 = new Moto(this, lblMoto1, lblMoto1.getX(), String.valueOf(GenerarViaje.distancia2));
             moto1.start();
-        } else if(jLabel4.getText().equals("Motocicleta 2")){
+        } else if (jLabel4.getText().equals("Motocicleta 2")) {
             Moto moto2 = new Moto(this, lblMoto1, lblMoto1.getX(), String.valueOf(GenerarViaje.distancia2));
             moto2.start();
-        } else if(jLabel4.getText().equals("Motocicleta 3")){
+        } else if (jLabel4.getText().equals("Motocicleta 3")) {
             Moto moto3 = new Moto(this, lblMoto1, lblMoto1.getX(), String.valueOf(GenerarViaje.distancia2));
             moto3.start();
-        } else if(jLabel4.getText().equals("Carro Premium 1")){
+        } else if (jLabel4.getText().equals("Carro Premium 1")) {
             CarroPremium premium1 = new CarroPremium(this, lblCarroPremium1, lblCarroPremium1.getX(), String.valueOf(GenerarViaje.distancia2));
             premium1.start();
-        } else if(jLabel4.getText().equals("Carro Premium 2")){
+        } else if (jLabel4.getText().equals("Carro Premium 2")) {
             CarroPremium premium2 = new CarroPremium(this, lblCarroPremium1, lblCarroPremium1.getX(), String.valueOf(GenerarViaje.distancia2));
             premium2.start();
-        } else if(jLabel4.getText().equals("Carro Premium 3")){
+        } else if (jLabel4.getText().equals("Carro Premium 3")) {
             CarroPremium premium3 = new CarroPremium(this, lblCarroPremium1, lblCarroPremium1.getX(), String.valueOf(GenerarViaje.distancia2));
             premium3.start();
         }
@@ -417,25 +413,25 @@ public class InterfazRecorrido extends javax.swing.JFrame {
         } else if (jLabel1.getText().equals("Carro Estándar 2")) {
             CarroEstandar estandar2 = new CarroEstandar(this, lblCarro, lblCarro.getX(), String.valueOf(GenerarViaje.distancia1));
             estandar2.start();
-        } else if (jLabel1.getText().equals("Carro Estándar 3")){
+        } else if (jLabel1.getText().equals("Carro Estándar 3")) {
             CarroEstandar estandar3 = new CarroEstandar(this, lblCarro, lblCarro.getX(), String.valueOf(GenerarViaje.distancia1));
             estandar3.start();
-        } else if(jLabel1.getText().equals("Motocicleta 1")){
+        } else if (jLabel1.getText().equals("Motocicleta 1")) {
             Moto moto1 = new Moto(this, lblMoto, lblMoto.getX(), String.valueOf(GenerarViaje.distancia1));
             moto1.start();
-        } else if(jLabel1.getText().equals("Motocicleta 2")){
+        } else if (jLabel1.getText().equals("Motocicleta 2")) {
             Moto moto2 = new Moto(this, lblMoto, lblMoto.getX(), String.valueOf(GenerarViaje.distancia1));
             moto2.start();
-        } else if(jLabel1.getText().equals("Motocicleta 3")){
+        } else if (jLabel1.getText().equals("Motocicleta 3")) {
             Moto moto3 = new Moto(this, lblMoto, lblMoto.getX(), String.valueOf(GenerarViaje.distancia1));
             moto3.start();
-        } else if(jLabel1.getText().equals("Carro Premium 1")){
+        } else if (jLabel1.getText().equals("Carro Premium 1")) {
             CarroPremium premium1 = new CarroPremium(this, lblCarroPremium, lblCarroPremium.getX(), String.valueOf(GenerarViaje.distancia1));
             premium1.start();
-        } else if(jLabel1.getText().equals("Carro Premium 2")){
+        } else if (jLabel1.getText().equals("Carro Premium 2")) {
             CarroPremium premium2 = new CarroPremium(this, lblCarroPremium, lblCarroPremium.getX(), String.valueOf(GenerarViaje.distancia1));
             premium2.start();
-        } else if(jLabel1.getText().equals("Carro Premium 3")){
+        } else if (jLabel1.getText().equals("Carro Premium 3")) {
             CarroPremium premium3 = new CarroPremium(this, lblCarroPremium, lblCarroPremium.getX(), String.valueOf(GenerarViaje.distancia1));
             premium3.start();
         }
@@ -448,25 +444,25 @@ public class InterfazRecorrido extends javax.swing.JFrame {
         } else if (jLabel1.getText().equals("Carro Estándar 2")) {
             CarroEstandarRegresar estandar2 = new CarroEstandarRegresar(this, lblCarro, lblCarro.getX());
             estandar2.start();
-        } else if (jLabel1.getText().equals("Carro Estándar 3")){
+        } else if (jLabel1.getText().equals("Carro Estándar 3")) {
             CarroEstandarRegresar estandar3 = new CarroEstandarRegresar(this, lblCarro, lblCarro.getX());
             estandar3.start();
-        } else if(jLabel1.getText().equals("Motocicleta 1")){
+        } else if (jLabel1.getText().equals("Motocicleta 1")) {
             MotoRegresar moto1 = new MotoRegresar(this, lblMoto, lblMoto.getX());
             moto1.start();
-        } else if(jLabel1.getText().equals("Motocicleta 2")){
+        } else if (jLabel1.getText().equals("Motocicleta 2")) {
             MotoRegresar moto2 = new MotoRegresar(this, lblMoto, lblMoto.getX());
             moto2.start();
-        } else if(jLabel1.getText().equals("Motocicleta 3")){
+        } else if (jLabel1.getText().equals("Motocicleta 3")) {
             MotoRegresar moto3 = new MotoRegresar(this, lblMoto, lblMoto.getX());
             moto3.start();
-        } else if(jLabel1.getText().equals("Carro Premium 1")){
+        } else if (jLabel1.getText().equals("Carro Premium 1")) {
             CarroPremiumRegresar premium1 = new CarroPremiumRegresar(this, lblCarroPremium, lblCarroPremium.getX());
             premium1.start();
-        } else if(jLabel1.getText().equals("Carro Premium 2")){
+        } else if (jLabel1.getText().equals("Carro Premium 2")) {
             CarroPremiumRegresar premium2 = new CarroPremiumRegresar(this, lblCarroPremium, lblCarroPremium.getX());
             premium2.start();
-        } else if(jLabel1.getText().equals("Carro Premium 3")){
+        } else if (jLabel1.getText().equals("Carro Premium 3")) {
             CarroPremiumRegresar premium3 = new CarroPremiumRegresar(this, lblCarroPremium, lblCarroPremium.getX());
             premium3.start();
         }
@@ -479,25 +475,25 @@ public class InterfazRecorrido extends javax.swing.JFrame {
         } else if (jLabel4.getText().equals("Carro Estándar 2")) {
             CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro1, lblCarro1.getX());
             estandar1.start();
-        } else if (jLabel4.getText().equals("Carro Estándar 3")){
+        } else if (jLabel4.getText().equals("Carro Estándar 3")) {
             CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro1, lblCarro1.getX());
             estandar1.start();
-        } else if(jLabel4.getText().equals("Motocicleta 1")){
+        } else if (jLabel4.getText().equals("Motocicleta 1")) {
             MotoRegresar moto1 = new MotoRegresar(this, lblMoto1, lblMoto1.getX());
             moto1.start();
-        } else if(jLabel4.getText().equals("Motocicleta 2")){
+        } else if (jLabel4.getText().equals("Motocicleta 2")) {
             MotoRegresar moto2 = new MotoRegresar(this, lblMoto1, lblMoto1.getX());
             moto2.start();
-        } else if(jLabel4.getText().equals("Motocicleta 3")){
+        } else if (jLabel4.getText().equals("Motocicleta 3")) {
             MotoRegresar moto3 = new MotoRegresar(this, lblMoto1, lblMoto1.getX());
             moto3.start();
-        } else if(jLabel4.getText().equals("Carro Premium 1")){
+        } else if (jLabel4.getText().equals("Carro Premium 1")) {
             CarroPremiumRegresar premium1 = new CarroPremiumRegresar(this, lblCarroPremium1, lblCarroPremium1.getX());
             premium1.start();
-        } else if(jLabel4.getText().equals("Carro Premium 2")){
+        } else if (jLabel4.getText().equals("Carro Premium 2")) {
             CarroPremiumRegresar premium2 = new CarroPremiumRegresar(this, lblCarroPremium1, lblCarroPremium1.getX());
             premium2.start();
-        } else if(jLabel4.getText().equals("Carro Premium 3")){
+        } else if (jLabel4.getText().equals("Carro Premium 3")) {
             CarroPremiumRegresar premium3 = new CarroPremiumRegresar(this, lblCarroPremium1, lblCarroPremium1.getX());
             premium3.start();
         }
@@ -510,35 +506,35 @@ public class InterfazRecorrido extends javax.swing.JFrame {
         } else if (jLabel7.getText().equals("Carro Estándar 2")) {
             CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro2, lblCarro2.getX());
             estandar1.start();
-        } else if (jLabel7.getText().equals("Carro Estándar 3")){
+        } else if (jLabel7.getText().equals("Carro Estándar 3")) {
             CarroEstandarRegresar estandar1 = new CarroEstandarRegresar(this, lblCarro2, lblCarro2.getX());
             estandar1.start();
-        } else if(jLabel7.getText().equals("Motocicleta 1")){
+        } else if (jLabel7.getText().equals("Motocicleta 1")) {
             MotoRegresar moto1 = new MotoRegresar(this, lblMoto2, lblMoto2.getX());
             moto1.start();
-        } else if(jLabel7.getText().equals("Motocicleta 2")){
+        } else if (jLabel7.getText().equals("Motocicleta 2")) {
             MotoRegresar moto2 = new MotoRegresar(this, lblMoto2, lblMoto2.getX());
             moto2.start();
-        } else if(jLabel7.getText().equals("Motocicleta 3")){
+        } else if (jLabel7.getText().equals("Motocicleta 3")) {
             MotoRegresar moto3 = new MotoRegresar(this, lblMoto2, lblMoto2.getX());
             moto3.start();
-        } else if(jLabel7.getText().equals("Carro Premium 1")){
+        } else if (jLabel7.getText().equals("Carro Premium 1")) {
             CarroPremiumRegresar premium1 = new CarroPremiumRegresar(this, lblCarroPremium2, lblCarroPremium2.getX());
             premium1.start();
-        } else if(jLabel7.getText().equals("Carro Premium 2")){
+        } else if (jLabel7.getText().equals("Carro Premium 2")) {
             CarroPremiumRegresar premium2 = new CarroPremiumRegresar(this, lblCarroPremium2, lblCarroPremium2.getX());
             premium2.start();
-        } else if(jLabel7.getText().equals("Carro Premium 3")){
+        } else if (jLabel7.getText().equals("Carro Premium 3")) {
             CarroPremiumRegresar premium3 = new CarroPremiumRegresar(this, lblCarroPremium2, lblCarroPremium2.getX());
             premium3.start();
         }
     }//GEN-LAST:event_botonRegresar3ActionPerformed
 
     public void establecerTextos() {
-            jLabel1.setText(GenerarViaje.vehiculo1);
-            jLabel2.setText("Distancia: " + String.valueOf(GenerarViaje.distancia1) + " KM");
-            jLabel3.setText("Inicio: " + GenerarViaje.inicio1);
-            jLabel10.setText("Destino: " + GenerarViaje.fin1);
+        jLabel1.setText(GenerarViaje.vehiculo1);
+        jLabel2.setText("Distancia: " + String.valueOf(GenerarViaje.distancia1) + " KM");
+        jLabel3.setText("Inicio: " + GenerarViaje.inicio1);
+        jLabel10.setText("Destino: " + GenerarViaje.fin1);
         if (GenerarViaje.vehiculo2 != null && GenerarViaje.distancia2 > 0 && GenerarViaje.fin2 != null && GenerarViaje.inicio2 != null) {
             jLabel4.setText(GenerarViaje.vehiculo2);
             jLabel5.setText("Distancia: " + String.valueOf(GenerarViaje.distancia2 + " KM"));
@@ -763,7 +759,6 @@ public class InterfazRecorrido extends javax.swing.JFrame {
 
         }
     }
-
 
     /**
      * @param args the command line arguments

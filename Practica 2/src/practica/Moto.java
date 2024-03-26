@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import javax.swing.*;
 
 public class Moto extends Thread {
-
+    
     InterfazRecorrido recorrido;
     Rectangle rec_muro;
     JLabel lblMoto;
